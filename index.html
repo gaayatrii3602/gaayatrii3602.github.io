@@ -4,631 +4,713 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Gaayatrii T's Data Analyst Portfolio featuring Power BI projects, business development experience, Python, SQL and data visualization.">
-
-    <meta name="author" content="Gaayatrii T">
-
+    <meta name="description" content="Gaayatrii T | Aspiring Data Analyst Portfolio">
     <title>Gaayatrii T | Data Analyst Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --background: #151c21;
+            --section: #1c262c;
+            --card: #222f35;
+            --teal: #63c6b5;
+            --text: #edf3f2;
+            --muted: #a6b5b3;
+            --border: #34444a;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(21, 28, 33, 0.97);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            color: var(--teal);
+            font-size: 22px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: var(--muted);
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 80px 12%;
+            background: radial-gradient(
+                circle at 85% 30%,
+                #253b3b 0%,
+                var(--background) 48%
+            );
+        }
+
+        .intro {
+            color: var(--teal);
+            letter-spacing: 3px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 65px);
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: var(--teal);
+        }
+
+        .hero h2 {
+            font-size: 23px;
+            font-weight: normal;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 620px;
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: var(--teal);
+            color: #142321;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #83d9ca;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 85px 12%;
+        }
+
+        .section-label {
+            color: var(--teal);
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            background: var(--section);
+        }
+
+        .about p {
+            color: var(--muted);
+            max-width: 850px;
+            margin-bottom: 15px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(190px, 1fr)
+            );
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 22px;
+            border-radius: 9px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .skill-card:hover {
+            border-color: var(--teal);
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            font-size: 32px;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .skill-info h3 {
+            color: var(--text);
+            margin-bottom: 5px;
+        }
+
+        .skill-info p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .projects {
+            background: var(--section);
+        }
+
+        .project-card {
+            max-width: 900px;
+            background: var(--card);
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: var(--teal);
+            transform: translateY(-4px);
+        }
+
+        .project-card h3 {
+            color: var(--teal);
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .tools {
+            color: var(--teal);
+            font-size: 14px;
+        }
+
+        .project-link {
+            margin-top: 20px;
+        }
+
+        .project-link a {
+            display: inline-block;
+            color: var(--teal);
+            border: 1px solid var(--teal);
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .project-link a:hover {
+            background: var(--teal);
+            color: var(--background);
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .dashboard-item {
+            background: var(--section);
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            padding: 12px;
+            transition: 0.3s;
+        }
+
+        .dashboard-item:hover {
+            border-color: var(--teal);
+            transform: translateY(-4px);
+        }
+
+        .dashboard-item h4 {
+            color: var(--text);
+            margin: 8px 0 5px;
+        }
+
+        .dashboard-item p {
+            font-size: 13px;
+        }
+
+        .dashboard-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: contain;
+            background: var(--background);
+            border-radius: 6px;
+            display: block;
+        }
+
+        .info-card {
+            background: var(--card);
+            border-left: 3px solid var(--teal);
+            padding: 22px;
+            margin-bottom: 18px;
+            border-radius: 5px;
+        }
+
+        .info-card h3 {
+            margin-bottom: 6px;
+        }
+
+        .info-card .meta {
+            color: var(--teal);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .info-card p,
+        .info-card li {
+            color: var(--muted);
+        }
+
+        .info-card ul {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+
+        .certification-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+
+        .certification-card p {
+            color: var(--muted);
+            margin-top: 10px;
+        }
+
+        .certification-card .status {
+            color: var(--teal);
+        }
+
+        .contact {
+            background: var(--section);
+            text-align: center;
+        }
+
+        .contact p {
+            color: var(--muted);
+        }
+
+        #contact a {
+            display: inline-block;
+            color: var(--teal);
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid var(--teal);
+            padding: 10px 18px;
+            border-radius: 6px;
+            margin: 8px 5px;
+            transition: 0.3s;
+        }
+
+        #contact a:hover {
+            background: var(--teal);
+            color: var(--background);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+        }
+
+        @media (max-width: 850px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 650px) {
+            header {
+                padding: 18px 5%;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 70px 7%;
+                min-height: 75vh;
+            }
+
+            section {
+                padding: 65px 7%;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-    <header class="site-header">
-        <a class="logo" href="#home">Gaayatrii T<span>.</span></a>
+    <header>
+        <div class="logo">Gaayatrii T.</div>
 
-        <nav aria-label="Main navigation">
+        <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#background">Background</a>
+            <a href="#education">Education & Experience</a>
             <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <main>
+    <div class="hero" id="home">
+        <div class="intro">HELLO, WELCOME TO MY PORTFOLIO</div>
 
-        <!-- HOME SECTION -->
-        <section class="hero" id="home">
+        <h1>Hi, I'm <span>Gaayatrii T.</span></h1>
 
-            <div class="hero-content">
-
-                <p class="eyebrow">
-                    HELLO, WELCOME TO MY PORTFOLIO
-                </p>
-
-                <h1>
-                    Hi, I'm <span>Gaayatrii T</span>
-                </h1>
-
-                <h2>
-                    Transforming Data into Decisions.
-                </h2>
-
-                <p class="role">
-                    Aspiring Data Analyst
-                </p>
-
-                <p class="hero-description">
-                    I'm passionate about turning complex data into
-                    meaningful insights that support smarter business
-                    decisions. I enjoy exploring data, identifying
-                    patterns, and creating impactful visualizations
-                    that make information easier to understand.
-                    I'm continuously developing my analytical skills
-                    to uncover valuable insights and drive business growth.
-                </p>
-
-                <a class="button" href="#projects">
-                    Explore My Work →
-                </a>
-
-            </div>
-
-            <div class="hero-decoration" aria-hidden="true">
-                <div class="orb orb-one"></div>
-                <div class="orb orb-two"></div>
-
-                <div class="orbit-card">
-                    <span class="orbit-icon">▥</span>
-                    <span>Data · Insights · Decisions</span>
-                </div>
-            </div>
-
-        </section>
-
-
-        <!-- ABOUT ME -->
-        <section class="section about-section" id="about">
-
-            <div class="section-label">
-                01 — INTRODUCTION
-            </div>
-
-            <h2 class="section-title">
-                About <span>Me</span>
-            </h2>
-
-            <div class="about-content">
-
-                <p>
-                    Hi, I'm Gaayatrii T. With over 2 years of
-                    experience in Business Development, working
-                    with Microsoft products and business solutions,
-                    I've developed a strong understanding of
-                    business processes and technology.
-                </p>
-
-                <p>
-                    My interest in data has inspired me to
-                    transition into Data Analytics, where I combine
-                    my business knowledge with Power BI, SQL,
-                    and Python to explore data, uncover insights,
-                    and support smarter business decisions.
-                </p>
-
-                <p>
-                    I enjoy learning how data can explain business
-                    performance, reveal patterns, and help teams
-                    make informed decisions. I'm continuously
-                    strengthening my analytical and technical skills
-                    through structured learning and practical projects.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- SKILLS -->
-        <section class="section" id="skills">
-
-            <div class="section-label">
-                02 — WHAT I WORK WITH
-            </div>
-
-            <h2 class="section-title">
-                Skills &amp; <span>Tools</span>
-            </h2>
-
-            <div class="skills-grid">
-
-                <article class="skill-card">
-                    <div class="skill-icon">📊</div>
-                    <div class="skill-info">
-                        <h3>Power BI</h3>
-                        <p>
-                            Dashboard development and data visualization
-                        </p>
-                    </div>
-                </article>
-
-                <article class="skill-card">
-                    <div class="skill-icon">🐍</div>
-                    <div class="skill-info">
-                        <h3>Python</h3>
-                        <p>
-                            Currently learning Python for data analysis
-                        </p>
-                    </div>
-                </article>
-
-                <article class="skill-card">
-                    <div class="skill-icon">🗄️</div>
-                    <div class="skill-info">
-                        <h3>SQL</h3>
-                        <p>
-                            Currently learning database querying
-                        </p>
-                    </div>
-                </article>
-
-                <article class="skill-card">
-                    <div class="skill-icon">📗</div>
-                    <div class="skill-info">
-                        <h3>Microsoft Excel</h3>
-                        <p>
-                            Basic spreadsheet operations
-                        </p>
-                    </div>
-                </article>
-
-                <article class="skill-card">
-                    <div class="skill-icon">📈</div>
-                    <div class="skill-info">
-                        <h3>Tableau</h3>
-                        <p>
-                            Learning data visualization
-                        </p>
-                    </div>
-                </article>
-
-                <article class="skill-card">
-                    <div class="skill-icon">🐼</div>
-                    <div class="skill-info">
-                        <h3>NumPy &amp; Pandas</h3>
-                        <p>
-                            Currently exploring Python data-analysis libraries
-                        </p>
-                    </div>
-                </article>
-
-                <article class="skill-card">
-                    <div class="skill-icon">🧹</div>
-                    <div class="skill-info">
-                        <h3>Data Cleaning</h3>
-                        <p>
-                            Data preparation and transformation concepts
-                        </p>
-                    </div>
-                </article>
-
-                <article class="skill-card">
-                    <div class="skill-icon">📉</div>
-                    <div class="skill-info">
-                        <h3>Data Visualization</h3>
-                        <p>
-                            Presenting information through clear visuals
-                        </p>
-                    </div>
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- FEATURED PROJECTS -->
-        <section class="section projects-section" id="projects">
-
-            <div class="section-label">
-                03 — MY WORK
-            </div>
-
-            <h2 class="section-title">
-                Featured <span>Projects</span>
-            </h2>
-
-            <article class="project-card">
-
-                <div class="project-topline">
-                    <span class="project-number">PROJECT 01</span>
-                    <span class="project-category">
-                        Power BI Dashboard
-                    </span>
-                </div>
-
-                <h3>
-                    Adventure Works Sales Analysis
-                </h3>
-
-                <p class="project-description">
-                    Developed a multi-page interactive Power BI
-                    dashboard to analyse business performance,
-                    explore sales trends, and gain insights into
-                    products and customers.
-                </p>
-
-
-                <!-- DASHBOARD IMAGES -->
-                <div class="dashboard-grid">
-
-                    <div class="dashboard-item">
-                        <img
-                            src="powerbi%20pic/executive-dashboard.png"
-                            alt="Executive Dashboard"
-                            class="dashboard-image"
-                            loading="lazy"
-                        >
-
-                        <h4>01. Executive Dashboard</h4>
-
-                        <p>
-                            Business performance overview.
-                        </p>
-                    </div>
-
-
-                    <div class="dashboard-item">
-                        <img
-                            src="powerbi%20pic/map-dashboard.png"
-                            alt="Map Dashboard"
-                            class="dashboard-image"
-                            loading="lazy"
-                        >
-
-                        <h4>02. Map Dashboard</h4>
-
-                        <p>
-                            Geographical sales analysis.
-                        </p>
-                    </div>
-
-
-                    <div class="dashboard-item">
-                        <img
-                            src="powerbi%20pic/product-detail.png"
-                            alt="Product Detail Dashboard"
-                            class="dashboard-image"
-                            loading="lazy"
-                        >
-
-                        <h4>03. Product Detail</h4>
-
-                        <p>
-                            Product-level performance analysis.
-                        </p>
-                    </div>
-
-
-                    <div class="dashboard-item">
-                        <img
-                            src="powerbi%20pic/customer-detail.png"
-                            alt="Customer Detail Dashboard"
-                            class="dashboard-image"
-                            loading="lazy"
-                        >
-
-                        <h4>04. Customer Detail</h4>
-
-                        <p>
-                            Customer insights and analysis.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <!-- PROJECT TOOLS -->
-                <div class="project-meta">
-
-                    <p>
-                        <strong>Tools:</strong>
-                        Power BI · Power Query · DAX
-                    </p>
-
-                    <p>
-                        <strong>Skills:</strong>
-                        Data Cleaning · Data Transformation ·
-                        Data Visualization · Dashboard Development
-                    </p>
-
-                </div>
-
-
-                <a
-                    class="project-link"
-                    href="https://github.com/gaayatrii3602/adventure-works-sales-analysis"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    View Project on GitHub →
-                </a>
-
-            </article>
-
-        </section>
-
-
-        <!-- EDUCATION AND EXPERIENCE -->
-        <section class="section" id="background">
-
-            <div class="section-label">
-                04 — MY BACKGROUND
-            </div>
-
-            <h2 class="section-title">
-                Education &amp; <span>Experience</span>
-            </h2>
-
-            <div class="timeline">
-
-
-                <!-- EDUCATION -->
-                <article class="info-card">
-
-                    <span class="card-kicker">
-                        EDUCATION
-                    </span>
-
-                    <h3>B.Com ISM</h3>
-
-                    <p class="organization">
-                        Justice Basheer Ahmed Sayeed College
-                        for Women (JBAS)
-                    </p>
-
-                </article>
-
-
-                <!-- COGENTNEXT EXPERIENCE -->
-                <article class="info-card">
-
-                    <span class="card-kicker">
-                        JUNE 2025 — PRESENT
-                    </span>
-
-                    <h3>
-                        Business Development Executive
-                    </h3>
-
-                    <p class="organization">
-                        CogentNext Technologies
-                    </p>
-
-                    <ul>
-
-                        <li>
-                            Conduct prospect research and lead identification
-                            using LinkedIn Sales Navigator to support
-                            pipeline growth.
-                        </li>
-
-                        <li>
-                            Use ZoomInfo and RocketReach to identify
-                            decision-makers and gather contact information.
-                        </li>
-
-                        <li>
-                            Execute personalized email outreach across
-                            domestic and international markets, including
-                            the USA, Canada, Australia, New Zealand,
-                            Africa, Europe and the Middle East.
-                        </li>
-
-                        <li>
-                            Manage targeted email campaigns through YAMM
-                            and arrange discovery sessions with
-                            prospective clients.
-                        </li>
-
-                        <li>
-                            Re-engage inactive leads through database
-                            cleansing and follow-up campaigns.
-                        </li>
-
-                        <li>
-                            Track lead engagement and pipeline progression
-                            using Salesforce CRM.
-                        </li>
-
-                        <li>
-                            Conduct market research, competitor analysis
-                            and industry trend monitoring.
-                        </li>
-
-                    </ul>
-
-                </article>
-
-
-                <!-- KARYA TECHNOLOGIES EXPERIENCE -->
-                <article class="info-card">
-
-                    <span class="card-kicker">
-                        DECEMBER 2023 — MAY 2025
-                    </span>
-
-                    <h3>
-                        Business Development Executive
-                    </h3>
-
-                    <p class="organization">
-                        Karya Technologies India Pvt. Ltd.
-                    </p>
-
-                    <ul>
-
-                        <li>
-                            Identified and engaged potential clients
-                            through email and social platforms across
-                            diverse industries.
-                        </li>
-
-                        <li>
-                            Collaborated with the sales team to support
-                            monthly revenue targets.
-                        </li>
-
-                        <li>
-                            Shared client feedback and contributed
-                            to marketing campaign planning.
-                        </li>
-
-                        <li>
-                            Prospected and qualified leads through
-                            LinkedIn and email outreach, generating
-                            100+ warm leads monthly.
-                        </li>
-
-                        <li>
-                            Secured 1 client closure and 15 qualified
-                            leads in 12 months through targeted email
-                            campaigns using customer success stories.
-                        </li>
-
-                        <li>
-                            Expanded the client base for SharePoint
-                            products and services through LinkedIn
-                            outreach and webinars.
-                        </li>
-
-                        <li>
-                            Monitored market trends and trained new
-                            team members on sales best practices.
-                        </li>
-
-                    </ul>
-
-                </article>
-
-
-                <!-- DATA ANALYTICS LEARNING -->
-                <article class="info-card">
-
-                    <span class="card-kicker">
-                        PROFESSIONAL DEVELOPMENT
-                    </span>
-
-                    <h3>
-                        Data Analytics Learning Journey
-                    </h3>
-
-                    <p>
-                        Developing skills in Python, SQL, Power BI,
-                        Excel and data visualization through coursework
-                        and practical projects.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- CERTIFICATIONS -->
-        <section class="section certifications-section" id="certifications">
-
-            <div class="section-label">
-                05 — CONTINUOUS LEARNING
-            </div>
-
-            <h2 class="section-title">
-                Certifications &amp; <span>Training</span>
-            </h2>
-
-            <article class="certification-card">
-
-                <div class="certification-icon">
-                    🎓
-                </div>
-
-                <div>
-
-                    <h3>
-                        Data Analytics Training
-                    </h3>
-
-                    <p class="organization">
-                        FITA Academy
-                    </p>
-
-                    <span class="status">
-                        Currently In Progress
-                    </span>
-
-                    <p class="certification-description">
-                        Learning Excel, SQL, Python, Statistics
-                        and Power BI with a focus on data analysis
-                        and visualization.
-                    </p>
-
-                </div>
-
-            </article>
-
-        </section>
-
-
-        <!-- CONTACT -->
-        <section class="section contact-section" id="contact">
-
-            <div class="section-label">
-                06 — GET IN TOUCH
-            </div>
-
-            <h2 class="section-title">
-                Let's <span>Connect!</span>
-            </h2>
-
-            <p>
-                Thank you for visiting my portfolio. I'm always
-                interested in learning, connecting and exploring
-                new opportunities.
-            </p>
-
-            <div class="contact-links">
-
-                <a
-                    href="https://www.linkedin.com/in/gaayatrii-t-057781289/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    LinkedIn
-                </a>
-
-                <a href="mailto:gaayatriitv@gmail.com">
-                    Email Me
-                </a>
-
-                <a
-                    href="https://github.com/gaayatrii3602"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    GitHub
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer>
+        <h2>Transforming Data into Decisions.</h2>
 
         <p>
-            © 2026 Gaayatrii T | Data Analyst Portfolio
+            Aspiring Data Analyst with a business development background.
+            I'm passionate about exploring data, identifying patterns and
+            transforming information into meaningful insights that support
+            smarter business decisions.
         </p>
 
+        <a href="#projects" class="button">
+            Explore My Work →
+        </a>
+    </div>
+
+    <section class="about" id="about">
+
+        <div class="section-label">01 — INTRODUCTION</div>
+
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            Hi, I'm Gaayatrii T. With 2+ years of experience in Business Development,
+            working with Microsoft products and business solutions, I've developed
+            a strong understanding of business processes and technology.
+        </p>
+
+        <p>
+            My interest in data has inspired me to transition into Data Analytics,
+            where I combine my business knowledge with Power BI, SQL and Python
+            to explore data, uncover insights and support smarter business decisions.
+        </p>
+
+        <p>
+            I enjoy working with data, identifying trends and creating meaningful
+            visualizations that make information easier to understand.
+        </p>
+
+    </section>
+
+    <section id="skills">
+
+        <div class="section-label">02 — WHAT I WORK WITH</div>
+
+        <h2 class="section-title">Skills & Tools</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+                <div class="skill-icon">📊</div>
+                <div class="skill-info">
+                    <h3>Power BI</h3>
+                    <p>Dashboard development and data visualization</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🐍</div>
+                <div class="skill-info">
+                    <h3>Python</h3>
+                    <p>Currently learning Python for data analysis</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🗄️</div>
+                <div class="skill-info">
+                    <h3>SQL</h3>
+                    <p>Currently learning database querying</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">📗</div>
+                <div class="skill-info">
+                    <h3>Microsoft Excel</h3>
+                    <p>Spreadsheet operations and data handling</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">📈</div>
+                <div class="skill-info">
+                    <h3>Tableau</h3>
+                    <p>Learning data visualization</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">🐼</div>
+                <div class="skill-info">
+                    <h3>NumPy & Pandas</h3>
+                    <p>Currently exploring Python data libraries</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+
+        <div class="section-label">03 — MY WORK</div>
+
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="project-card">
+
+            <h3>Adventure Works Sales Analysis</h3>
+
+            <p>
+                Developed a multi-page interactive Power BI dashboard to analyse
+                business performance, explore sales trends and gain insights into
+                products and customers.
+            </p>
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-item">
+                    <img src="powerbi%20pic/executive-dashboard.png"
+                         alt="Executive Dashboard"
+                         class="dashboard-image">
+                    <h4>01. Executive Dashboard</h4>
+                    <p>Business performance overview.</p>
+                </div>
+
+                <div class="dashboard-item">
+                    <img src="powerbi%20pic/map-dashboard.png"
+                         alt="Map Dashboard"
+                         class="dashboard-image">
+                    <h4>02. Map Dashboard</h4>
+                    <p>Geographical sales analysis.</p>
+                </div>
+
+                <div class="dashboard-item">
+                    <img src="powerbi%20pic/product-detail.png"
+                         alt="Product Detail Dashboard"
+                         class="dashboard-image">
+                    <h4>03. Product Detail Dashboard</h4>
+                    <p>Product-level performance analysis.</p>
+                </div>
+
+                <div class="dashboard-item">
+                    <img src="powerbi%20pic/customer-detail.png"
+                         alt="Customer Detail Dashboard"
+                         class="dashboard-image">
+                    <h4>04. Customer Detail Dashboard</h4>
+                    <p>Customer insights and analysis.</p>
+                </div>
+
+            </div>
+
+            <div class="tools">
+                Tools: Power BI · Power Query · DAX
+            </div>
+
+            <br>
+
+            <p>
+                Skills: Data Cleaning · Data Transformation · Data Visualization ·
+                Dashboard Development
+            </p>
+
+            <p class="project-link">
+                <a href="https://github.com/gaayatrii3602"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View My GitHub →
+                </a>
+            </p>
+
+        </div>
+    </section>
+
+    <section id="education">
+
+        <div class="section-label">04 — MY BACKGROUND</div>
+
+        <h2 class="section-title">Education & Experience</h2>
+
+        <div class="info-card">
+            <h3>B.Com ISM</h3>
+            <p>Justice Basheer Ahmed Sayeed College for Women (JBAS)</p>
+        </div>
+
+        <div class="info-card">
+            <h3>CogentNext Technologies</h3>
+            <div class="meta">
+                Business Development Executive | Jun 2025 – Present
+            </div>
+            <ul>
+                <li>Conduct prospect research and lead identification using LinkedIn Sales Navigator to support pipeline growth.</li>
+                <li>Use ZoomInfo and RocketReach to identify decision-makers and gather contact information.</li>
+                <li>Manage personalized email outreach and targeted campaigns for domestic and international markets.</li>
+                <li>Track lead engagement and pipeline progress using Salesforce CRM.</li>
+                <li>Conduct market research, competitor analysis and monitor industry trends.</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Karya Technologies India Pvt. Ltd.</h3>
+            <div class="meta">
+                Business Development Executive | Dec 2023 – May 2025
+            </div>
+            <ul>
+                <li>Identified and engaged potential clients through email and social platforms across different industries.</li>
+                <li>Generated 100+ warm leads monthly through LinkedIn and email prospecting.</li>
+                <li>Secured 1 client closure and 15 qualified leads in 12 months through targeted email campaigns.</li>
+                <li>Supported SharePoint product and service outreach through LinkedIn campaigns and webinars.</li>
+                <li>Collaborated with the sales team to work toward monthly revenue targets and mentored new team members.</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Data Analytics Learning Journey</h3>
+            <p>
+                Developing practical skills in Power BI, SQL, Python, Excel and
+                data visualization through training and hands-on projects.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="certifications">
+
+        <div class="section-label">05 — CONTINUOUS LEARNING</div>
+
+        <h2 class="section-title">Certifications & Training</h2>
+
+        <div class="certification-card">
+            <h3>Data Analytics Training</h3>
+            <p>FITA Academy</p>
+            <p class="status">Currently In Progress</p>
+            <p>
+                Learning Excel, SQL, Python, Statistics and Power BI with a focus
+                on data analysis and visualization.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+        <div class="section-label">06 — GET IN TOUCH</div>
+
+        <h2 class="section-title">Let's Connect!</h2>
+
+        <p>
+            Thank you for visiting my portfolio. I'm always interested in learning,
+            connecting and exploring new opportunities.
+        </p>
+
+        <p style="margin-top: 15px;">
+
+            <a href="https://www.linkedin.com/in/gaayatrii-t-057781289"
+               target="_blank"
+               rel="noopener noreferrer">
+                LinkedIn
+            </a>
+
+            <a href="mailto:gaayatriitv@gmail.com">
+                Email Me
+            </a>
+
+            <a href="https://github.com/gaayatrii3602"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub
+            </a>
+
+        </p>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Gaayatrii T | Personal Portfolio</p>
     </footer>
 
 </body>
