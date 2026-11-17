@@ -8,237 +8,15 @@
     <title>Gaayatrii | Data Analyst Portfolio</title>
 
     <meta name="description"
-          content="Gaayatrii's Data Analytics Portfolio showcasing Power BI, Python, SQL and data visualization projects.">
-<link rel="stylesheet" href="style.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+          content="Gaayatrii's Data Analytics Portfolio showcasing Power BI, Python, Excel, SQL, Tableau and data visualization projects.">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #263238;
-            line-height: 1.6;
-        }
-
-        /* Navigation */
-
-        header {
-            background: #14213d;
-            color: white;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        header h2 {
-            color: #00b4d8;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 22px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #00b4d8;
-        }
-
-        /* Hero Section */
-
-        .hero {
-            min-height: 400px;
-            background: #14213d;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 span {
-            color: #00b4d8;
-        }
-
-        .hero p {
-            font-size: 18px;
-            max-width: 650px;
-            margin-bottom: 25px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #00b4d8;
-            color: #14213d;
-            padding: 12px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background: #90e0ef;
-        }
-
-        /* General Sections */
-
-        section {
-            padding: 65px 8%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 30px;
-            margin-bottom: 35px;
-            color: #14213d;
-        }
-
-        /* About */
-
-        .about {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-            font-size: 17px;
-        }
-
-        /* Skills */
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .skill {
-            background: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            font-weight: bold;
-        }
-
-        /* Projects */
-
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(
-                auto-fit,
-                minmax(280px, 1fr)
-            );
-            gap: 25px;
-        }
-
-        .project-card {
-            background: white;
-            padding: 22px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card h3 {
-            color: #14213d;
-            margin-bottom: 12px;
-        }
-
-        .project-card p {
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .project-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .project-link {
-            display: inline-block;
-            background: #0077b6;
-            color: white;
-            text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 6px;
-        }
-
-        .project-link:hover {
-            background: #023e8a;
-        }
-
-        /* Contact */
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact a {
-            color: #0077b6;
-            text-decoration: none;
-        }
-
-        /* Footer */
-
-        footer {
-            background: #14213d;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Responsive Design */
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                text-align: center;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px 8px;
-            }
-
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            section {
-                padding: 45px 6%;
-            }
-        }
-    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- Navigation Bar -->
-
     <header>
         <h2>Gaayatrii</h2>
 
@@ -251,9 +29,7 @@
         </nav>
     </header>
 
-
     <!-- Hero Section -->
-
     <section class="hero" id="home">
 
         <h1>Hello, I'm <span>Gaayatrii</span></h1>
@@ -261,7 +37,7 @@
         <p>
             Aspiring Data Analyst passionate about transforming
             raw data into meaningful insights through data
-            analysis and visualization.
+            analysis, business intelligence and visualization.
         </p>
 
         <a href="#projects" class="btn">
@@ -270,60 +46,140 @@
 
     </section>
 
-
     <!-- About Section -->
-
     <section id="about">
 
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">About <span>Me</span></h2>
 
         <div class="about">
             <p>
                 I am an aspiring Data Analyst interested in
-                data visualization, business intelligence,
-                and extracting meaningful insights from data.
+                data visualization, business intelligence and
+                extracting meaningful insights from data.
 
                 I have developed practical skills in Power BI,
-                Python, and data analysis, and I am currently
-                learning SQL to strengthen my database
-                querying and analytical skills.
+                Excel and Tableau. I am currently strengthening
+                my Python and SQL skills through continuous
+                learning and practical projects.
             </p>
         </div>
 
     </section>
 
-
     <!-- Skills Section -->
-
     <section id="skills">
 
-        <h2 class="section-title">Technical Skills</h2>
+        <h2 class="section-title">
+            Technical <span>Skills</span>
+        </h2>
 
         <div class="skills-container">
 
-            <div class="skill">Power BI</div>
-            <div class="skill">Python</div>
-            <div class="skill">Pandas</div>
-            <div class="skill">NumPy</div>
-            <div class="skill">Power Query</div>
-            <div class="skill">DAX</div>
-            <div class="skill">SQL (Learning)</div>
-            <div class="skill">Data Visualization</div>
+            <!-- Python -->
+            <div class="skill-card">
+
+                <h3>Python</h3>
+
+                <div class="skill-logos">
+                    <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python Logo">
+
+                    <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+                        alt="NumPy Logo">
+
+                    <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                        alt="Pandas Logo">
+                </div>
+
+                <span class="skill-status in-progress">
+                    In Progress
+                </span>
+
+            </div>
+
+            <!-- Power BI -->
+            <div class="skill-card">
+
+                <h3>Power BI</h3>
+
+                <div class="skill-logos">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"
+                        alt="Power BI Logo">
+                </div>
+
+                <span class="skill-status completed">
+                    Completed
+                </span>
+
+            </div>
+
+            <!-- Excel -->
+            <div class="skill-card">
+
+                <h3>Excel</h3>
+
+                <div class="skill-logos">
+                    <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+                        alt="Microsoft Excel Logo">
+                </div>
+
+                <span class="skill-status completed">
+                    Completed
+                </span>
+
+            </div>
+
+            <!-- Tableau -->
+            <div class="skill-card">
+
+                <h3>Tableau</h3>
+
+                <div class="skill-logos">
+                    <img
+                        src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg"
+                        alt="Tableau Logo">
+                </div>
+
+                <span class="skill-status completed">
+                    Completed
+                </span>
+
+            </div>
+
+            <!-- SQL -->
+            <div class="skill-card">
+
+                <h3>SQL</h3>
+
+                <div class="skill-logos">
+                    <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                        alt="SQL Logo">
+                </div>
+
+                <span class="skill-status in-progress">
+                    In Progress
+                </span>
+
+            </div>
 
         </div>
 
     </section>
 
-
     <!-- Projects Section -->
-
     <section id="projects">
 
-        <h2 class="section-title">My Projects</h2>
+        <h2 class="section-title">
+            Featured <span>Projects</span>
+        </h2>
 
         <div class="projects-container">
-
-            <!-- Project 1 -->
 
             <div class="project-card">
 
@@ -331,7 +187,7 @@
 
                 <p>
                     Developed an interactive Power BI dashboard
-                    to analyze sales, revenue, profit margins,
+                    to analyze sales, revenue, profit margins
                     and regional performance across multiple
                     product categories.
                 </p>
@@ -339,16 +195,16 @@
                 <img
                     src="powerbi%20pic/sales-dashboard.png"
                     alt="Adventure Works Power BI Sales Dashboard"
-                    class="project-image"
-                >
+                    class="project-image">
 
                 <a
                     href="https://github.com/gaayatrii3602/adventure-works-sales-analysis"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="project-link"
-                >
+                    class="project-link">
+
                     View Project
+
                 </a>
 
             </div>
@@ -357,26 +213,30 @@
 
     </section>
 
-
     <!-- Contact Section -->
-
     <section id="contact">
 
-        <h2 class="section-title">Contact Me</h2>
+        <h2 class="section-title">
+            Contact <span>Me</span>
+        </h2>
 
         <div class="contact">
 
             <p>
-                Interested in connecting or discussing data
-                analytics opportunities? Feel free to reach out.
+                Interested in connecting or discussing
+                data analytics opportunities?
+                Feel free to reach out.
             </p>
 
             <p>
                 GitHub:
-                <a href="https://github.com/gaayatrii3602"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="https://github.com/gaayatrii3602"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
                     github.com/gaayatrii3602
+
                 </a>
             </p>
 
@@ -384,13 +244,13 @@
 
     </section>
 
-
     <!-- Footer -->
-
     <footer>
+
         <p>
             &copy; 2026 Gaayatrii | Data Analyst Portfolio
         </p>
+
     </footer>
 
 </body>
